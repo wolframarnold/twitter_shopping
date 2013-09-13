@@ -46,3 +46,9 @@ end
 
 gem 'devise'
 gem 'puma'
+
+gem 'rspec-rails'
+
+group :test do
+  gem 'factory_girl_rails'
+end
