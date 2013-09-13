@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :stores, dependent: :destroy
   has_many :products
+  has_many :orders
 
   def is_seller?
     stores.present?
