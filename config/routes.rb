@@ -1,7 +1,10 @@
 TwitterShopping::Application.routes.draw do
 
+  get "orders/create"
+  get "products/index"
   devise_for :users
-  root :to => 'home#index'
+  root :to => 'products#index'
+  resource :order, only: :create
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
